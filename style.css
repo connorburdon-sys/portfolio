@@ -15,6 +15,7 @@
         header{background-color:rgb(10, 13, 84); }
 
         nav{background-color:rgb(100, 91, 203); }
+        p{color:whitesmoke;}
         nav ul{list-style-type:circle; margin:0; padding:0; overflow:hidden; }
         
         main{font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
