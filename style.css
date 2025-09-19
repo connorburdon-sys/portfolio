@@ -21,5 +21,12 @@
         background-color:rgb(104, 91, 203);}
         footer{background-color:rgb(10, 13, 84); }
         aside{background-color:cornflowerblue; border-radius:30px; margin:20px; padding:20px;}
-        
+        img {
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+}
         
