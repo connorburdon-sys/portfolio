@@ -100,7 +100,7 @@ border-bottom-left-radius:0;}
 
     
    
-       .end1{position:relative; width:50px; height: 135px;
+       .end1{position:relative; width:50px; height: 100px;
         top: -105px; left: 450px;
     background-color:#5D5757;
         opacity: 10%;
@@ -131,6 +131,8 @@ top: 35px;}
     position:relative; width:100px; height: 100px;
     left: 10px;
     top: 40px;}
+
+    audio{position:relative; width: 300px; height: 10px;}
          
        
        
