@@ -35,7 +35,7 @@ p{color:#C5BABA;}
 .end2{position:relative; width:275px; height: 155px;
     top: 0px; left: 775px;
 background-color:#5D5757;
-        opacity: 10%;
+        opacity: 60%;
      border-top-right-radius:33;
 border-bottom-right-radius:33;
     border-top-left-radius:0;
@@ -43,7 +43,7 @@ border-bottom-left-radius:0;}
 .end3{position:relative; width: 350px;; height: 155px;
     top: 10px; left: 950px;
 background-color:#5D5757;
-        opacity: 10%;
+        opacity: 60%;
      border-top-right-radius:33;
 border-bottom-right-radius:33;
     border-top-left-radius:0;
@@ -51,7 +51,7 @@ border-bottom-left-radius:0;}
 .end4{position:relative; width:425px; height: 155px;
     top: -30px; left: 950px;
 background-color:#5D5757;
-        opacity: 10%;
+        opacity: 60%;
      border-top-right-radius:33;
 border-bottom-right-radius:33;
     border-top-left-radius:0;
