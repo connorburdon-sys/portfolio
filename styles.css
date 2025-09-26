@@ -22,8 +22,8 @@ div{position:relative; width:1051px; height: 155px;;
         top: 500px; left: 0px; background-color: #263548;
     border-top-left-radius:0%;
     border-bottom-left-radius :0%;
-border-top-right-radius: 25px;
-border-bottom-right-radius: 25px;}
+border-top-right-radius: 33px;
+border-bottom-right-radius: 33px;}
 
 p{color:#C5BABA;}
 
@@ -103,12 +103,12 @@ border-bottom-left-radius:0;}
 
     
    
-       .end1{position:relative; width:50px; height: 100px;
-        top: -105px; left: 450px;
+       .end1{position:relative; width:50px; height: 135px;
+        top: -124px; left: 450px;
     background-color:#5D5757;
-        opacity: 10%;
-     border-top-right-radius:33;
-border-bottom-right-radius:33;
+        opacity: 60%;
+     border-top-right-radius:25;
+border-bottom-right-radius:25;
     border-top-left-radius:0;
 border-bottom-left-radius:0;}
 .queens{display:inline-block;
