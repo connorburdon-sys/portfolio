@@ -44,11 +44,11 @@ h1 {
     margin-top: 5%;
     margin-left: 5%;
     width: clamp(50px, 90vw, 5000px);
-    height: 35vh;
+    height: 30vh;
     border-radius: 30px;
     display: grid;
     grid-auto-columns: 1fr;
-    grid-template-columns: 1fr 1fr 0.5fr 0.5fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 2fr;
     gap: 0px 0px;
     grid-template-areas:
@@ -56,7 +56,7 @@ h1 {
         "text text text img";
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 800px) {
 
     .mij {
         display: none;
@@ -91,7 +91,7 @@ h1 {
 
 p {
     color: #C5BABA;
-    font-size: 2vh;
+    font-size: 1vw;
 }
 
 nav {
@@ -104,14 +104,12 @@ nav {
     margin-right: 2vw;
 }
 
-.link{text-decoration: none;}
-
 .link:hover {
     color: #58bbcfd4;
     text-decoration: wavy;
-    text-decoration: none;
+    text-decoration: underline;
     transition: 0.3s;
-    font-size: large;
+    font-size: xx-large;
 }
 
 .link:active {
@@ -130,10 +128,9 @@ nav {
     border-bottom-right-radius: 33px;
     border-top-right-radius: 33px;
     grid-area: img;
-    height: 98.75%;
-    width:100%;
+    height: 100%;
+    width: 100%;
     max-height: 1000px;
-    
 }
 
 #base2 {
@@ -144,9 +141,8 @@ nav {
     grid-template-rows: .75fr 1fr;
     gap: 0px 0px;
     grid-template-areas:
-        "title2 . . ."
+        "title2 title2 title2 ."
         "html css java desing";
-        justify-items: center;
 }
 
 .title2 {
@@ -155,58 +151,36 @@ nav {
 
 .htmlimg {
     grid-area: html;
-    margin-left: 10%;
 }
 
 .cssimg {
     grid-area: css;
-     margin-left: 10%;
 }
 
 .javaimg {
     grid-area: java;
-    margin-left: 10%;
 }
 
 .disingimg {
     grid-area: desing;
-     margin-left: 10%;
 }
 
-.erv { height: 65%;
-    max-width: 200px;
+.erv {
+    width: 80%;
+    max-width: 400px;
+    height: 60%;
     padding: 3%;
-    margin-left: 10%;
 }
 
 @media screen and (max-height: 700px) {
 
     .erv {
-        height:30% ;
-        margin-left: 0%;
+        height:50% ;
     }
 
     .base2 {height:fit-content ;}
 
 }
-
-@media screen and (max-width:700px)  {
-
-    .erv {
-    height:40%;}
-    
-}
-
-@media screen and (max-width:500px)  {
-
-    .erv {
-    height:20%;}
-    
-}
-
-
-
-
 
 .base3{height:25vh;
   display: grid; 
