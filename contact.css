@@ -100,11 +100,10 @@ nav {
 
 a{color: #C5BABA;
     font-size: 2vh;
+    text-decoration: none;
 }
 
-.link{text-decoration: none;}
-
-.link:hover {
+a:hover {
     color: #58bbcfd4;
     text-decoration: wavy;
     text-decoration: none;
@@ -112,18 +111,20 @@ a{color: #C5BABA;
     font-size: large;
 }
 
-.link:active {
+a:active {
     color: #52657f;
     text-decoration: none;
     font-size: x-large;
 }
 
-.link:visited {
+a:visited {
     color: #a9acb4;
     text-decoration: none;
 }
 
-img{height:70%}
+img{height:70%;
+border:1px solid #206474;
+border-radius:30%; }
 
 @media screen and (max-width: 700px) {
 
