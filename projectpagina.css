@@ -91,11 +91,21 @@ nav {
 }
 
 
+.link{text-decoration: none;
+padding: 3%;}
+
 .link:hover {
-    color: #405E65;
+    color: #58bbcfd4;
     text-decoration: wavy;
-    text-decoration: underline;
+    text-decoration: none;
     transition: 0.3s;
+    font-size: large;
+}
+
+.link:active {
+    color: #52657f;
+    text-decoration: none;
+    font-size: x-large;
 }
 
 .link:visited {
@@ -114,6 +124,7 @@ nav {
     font-family: 'Montserrat', Arial, sans-serif;
     font-size:1.5vh;
     margin: -15%;
+    margin-left: 10%;
 }
 
 .goededoelimg {
