@@ -215,7 +215,8 @@ nav {
 
         .erv {
     height:90%;
-align-items: center;}
+align-items: center;
+margin-left: 0%;}
     
 
     
@@ -231,7 +232,8 @@ align-items: center;}
 @media screen and (max-height:500px)  {
 
     .erv {
-    height:20%;}
+    height:20%;
+margin-left: 0%;}
     
 }
 
