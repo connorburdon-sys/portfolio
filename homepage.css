@@ -54,6 +54,7 @@ h1 {
     grid-template-areas:
         "title title . img"
         "text text text img";
+    align-items: center;
 }
 
 @media screen and (max-width: 950px) {
@@ -147,6 +148,7 @@ nav {
         "title2 . . ."
         "html css java desing";
         justify-items: center;
+        align-items: flex-start;
 }
 
 .title2 {
@@ -179,10 +181,10 @@ nav {
     margin-left: 10%;
 }
 
-@media screen and (max-height: 700px) {
+@media screen and (max-height: 900px) {
 
     .erv {
-        height:30% ;
+        height:40% ;
         margin-left: 0%;
     }
 
@@ -190,14 +192,43 @@ nav {
 
 }
 
-@media screen and (max-width:700px)  {
+@media screen and (max-width:800px)  {
 
-    .erv {
-    height:40%;}
+    #base2 {
+        width: 80vw;
+    height: 60vh;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: .75fr 20% 20% 20% 20%;
+    gap: 0px 0px;
+    grid-template-areas:
+        "title2"
+        "html"
+        "css"
+        "java"
+        "desing";
+        justify-items: center;
+        align-items: center;
+        margin: auto;
+        margin-top: 5%;}
+
+        .erv {
+    height:90%;
+align-items: center;}
+    
+
     
 }
 
 @media screen and (max-width:500px)  {
+
+    .erv {
+    height:90%;}
+    
+}
+
+@media screen and (max-height:500px)  {
 
     .erv {
     height:20%;}
