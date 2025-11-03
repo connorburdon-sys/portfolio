@@ -5,15 +5,17 @@ body {
     width: 100%;
     margin: 0%;
     background: url(images/Schermafbeelding\ 2025-10-29\ 143323.png);
-     background-size: cover;
-  background-position: center;   
-  background-repeat: no-repeat; 
-  background-attachment: fixed;  
-  height: 100vh;                 
-  margin: 0;        
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    margin: 0;
 }
 
-*{font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 
 h2 {
     color: #C5BABA;
@@ -23,7 +25,7 @@ h2 {
 header {
     background-color: #405E65;
     width: 100vw;
-    height:fit-content;
+    height: fit-content;
     font-family: 'Montserrat', Arial, sans-serif;
     display: flex;
     flex-direction: row;
@@ -46,34 +48,49 @@ h1 {
     width: clamp(50px, 90vw, 5000px);
     height: 40vh;
     border-radius: 30px;
-display: grid; 
-  grid-auto-columns: 1fr; 
-  grid-template-columns: 1fr 1fr 1fr; 
-  grid-template-rows: 20% 45% 30%; 
-  gap: 0px 0px; 
-  grid-template-areas: 
-    "title . ."
-    "mail phone git"
-    "mailtext phonetext gittext"; 
-align-items: center;
-justify-items: center;
-text-align:center ;}
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 20% 45% 30%;
+    gap: 0px 0px;
+    grid-template-areas:
+        "title . ."
+        "mail phone git"
+        "mailtext phonetext gittext";
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+}
 
-    .title{grid-area:title;
-    margin-top:10% ;
-margin-bottom: 7%;}
+.title {
+    grid-area: title;
+    margin-top: 10%;
+    margin-bottom: 7%;
+}
 
-    .mail{grid-area:mail ;}
+.mail {
+    grid-area: mail;
+}
 
-    .mailtekst{grid-area:mailtext ;}
+.mailtekst {
+    grid-area: mailtext;
+}
 
-    .phone{grid-area:phone;}
+.phone {
+    grid-area: phone;
+}
 
-    .phonetekst{grid-area:phonetext;}
+.phonetekst {
+    grid-area: phonetext;
+}
 
-    .github{grid-area:git;}
+.github {
+    grid-area: git;
+}
 
-    .gittekst{grid-area:gittext;}
+.gittekst {
+    grid-area: gittext;
+}
 
 .base:hover {
     background-color: #2a859a;
@@ -100,7 +117,8 @@ nav {
     margin-right: 2vw;
 }
 
-a{color: #C5BABA;
+a {
+    color: #C5BABA;
     font-size: 2vh;
     text-decoration: none;
 }
@@ -124,110 +142,129 @@ a:visited {
     text-decoration: none;
 }
 
-img{height:70%;
-border:1px solid #206474;
-border-radius:30%; }
+img {
+    height: 70%;
+    border: 1px solid #206474;
+    border-radius: 30%;
+}
 
 @media screen and (max-width: 700px) {
 
     img {
-        height:40% ;
+        height: 40%;
     }
 
-    .base2 {height:fit-content ;}
+    .base2 {
+        height: fit-content;
+    }
 
 }
 
 @media screen and (max-width: 500px) {
 
     img {
-        height:30% ;
+        height: 30%;
     }
 
-    .base2 {height:fit-content ;}
+    .base2 {
+        height: fit-content;
+    }
 
 }
 
-label{display: flex;
-flex-direction: column;
-color: #C5BABA;
+label {
+    display: flex;
+    flex-direction: column;
+    color: #C5BABA;
     font-size: 2vh;
-opacity:90%;
-width: 100%;
-margin-left:3%;}
+    opacity: 90%;
+    width: 100%;
+    margin-left: 3%;
+}
 
-input{background-color: #2a859a;
-color: #C5BABA;
+input {
+    background-color: #2a859a;
+    color: #C5BABA;
     font-size: 2vh;
-border:solid 1px #263548;
-border-radius:33px;
-width:95%;
-height:6vh;
-margin-bottom: 3%;}
+    border: solid 1px #263548;
+    border-radius: 33px;
+    width: 95%;
+    height: 6vh;
+    margin-bottom: 3%;
+}
 
-textarea{background-color: #2a859a;
-color: #C5BABA;
+textarea {
+    background-color: #2a859a;
+    color: #C5BABA;
     font-size: 2vh;
-border:solid 1px #263548;
-border-radius:10px;
-width:95%;
-height:12vh;
+    border: solid 1px #263548;
+    border-radius: 10px;
+    width: 95%;
+    height: 12vh;
 }
 
 
-.bevestig{background-color: #2a859a;
-color: #C5BABA;
+.bevestig {
+    background-color: #2a859a;
+    color: #C5BABA;
     font-size: 2vh;
-height: 6vh;
-width:80%;
-border:solid 1px #263548;
-border-radius:33px;
-grid-area: button;
-margin-left: 10%;
-margin-top: 2%;}
+    height: 6vh;
+    width: 80%;
+    border: solid 1px #263548;
+    border-radius: 33px;
+    grid-area: button;
+    margin-left: 10%;
+    margin-top: 2%;
+}
 
-.bevestig:hover{background-color: #35adc8;
-color: #fffdfd;
+.bevestig:hover {
+    background-color: #35adc8;
+    color: #fffdfd;
     font-size: 2.5vh;
-height:6.5vh ;
-width:82%;
-transition: 0.5s;}
+    height: 6.5vh;
+    width: 82%;
+    margin-left: 9%;
+    transition: 0.5s;
+}
 
-.bevestig:active{background-color: #01d0ff;
-color: #fffdfd;
+.bevestig:active {
+    background-color: #01d0ff;
+    color: #fffdfd;
     font-size: 2.5vh;
-height:5.9vh ;
-width:79%;
-transition: 0.3s;}
+    height: 5.9vh;
+    width: 79%;
+    transition: 0.3s;
+}
 
-#base2{
-display: grid; 
-background-color: #263548;
+#base2 {
+    display: grid;
+    background-color: #263548;
     gap: 1vw;
     margin-top: 5%;
     margin-left: 5%;
     margin-bottom: 2%;
     width: clamp(50px, 90vw, 5000px);
     border-radius: 30px;
-  height:70vh;
-  grid-auto-columns: 1fr; 
-  grid-template-columns:  1fr ; 
-  grid-template-rows: 20% 1fr ; 
-  gap: 0px 0px; 
-  grid-template-areas: 
-    "title "
-    " label1 "
-    ; 
+    height: 70vh;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20% 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "title "
+        " label1 "
+    ;
     justify-items: stretch;
 }
 
-.label1{grid-area:label1;}
+.label1 {
+    grid-area: label1;
+}
 
-.label2{grid-area:label2;}
+.label2 {
+    grid-area: label2;
+}
 
-.title2{grid-area: title;}
-
-
-
-
-
+.title2 {
+    grid-area: title;
+}

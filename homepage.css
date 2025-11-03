@@ -102,10 +102,13 @@ nav {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     word-spacing: 2%;
     margin-top: 5vh;
-    margin-right: 2vw;
+    margin-right: 3vw;
 }
 
-.link{text-decoration: none;}
+.link {
+    text-decoration: none;
+    margin-right: 0.004%;
+}
 
 .link:hover {
     color: #58bbcfd4;
@@ -132,9 +135,9 @@ nav {
     border-top-right-radius: 33px;
     grid-area: img;
     height: 98.75%;
-    width:100%;
+    width: 100%;
     max-height: 1000px;
-    
+
 }
 
 #base2 {
@@ -147,8 +150,8 @@ nav {
     grid-template-areas:
         "title2 . . ."
         "html css java desing";
-        justify-items: center;
-        align-items: flex-start;
+    justify-items: center;
+    align-items: flex-start;
 }
 
 .title2 {
@@ -162,7 +165,7 @@ nav {
 
 .cssimg {
     grid-area: css;
-     margin-left: 10%;
+    margin-left: 10%;
 }
 
 .javaimg {
@@ -172,10 +175,11 @@ nav {
 
 .disingimg {
     grid-area: desing;
-     margin-left: 10%;
+    margin-left: 10%;
 }
 
-.erv { height: 65%;
+.erv {
+    height: 65%;
     max-width: 200px;
     padding: 3%;
     margin-left: 10%;
@@ -184,74 +188,86 @@ nav {
 @media screen and (max-height: 900px) {
 
     .erv {
-        height:40% ;
+        height: 40%;
         margin-left: 0%;
     }
 
-    .base2 {height:fit-content ;}
+    .base2 {
+        height: fit-content;
+    }
 
 }
 
-@media screen and (max-width:800px)  {
+@media screen and (max-width:800px) {
 
     #base2 {
         width: 80vw;
-    height: 60vh;
-    display: grid;
-    grid-auto-columns: 1fr;
-    grid-template-columns: 1fr;
-    grid-template-rows: .75fr 20% 20% 20% 20%;
-    gap: 0px 0px;
-    grid-template-areas:
-        "title2"
-        "html"
-        "css"
-        "java"
-        "desing";
+        height: 60vh;
+        display: grid;
+        grid-auto-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-rows: .75fr 20% 20% 20% 20%;
+        gap: 0px 0px;
+        grid-template-areas:
+            "title2"
+            "html"
+            "css"
+            "java"
+            "desing";
         justify-items: center;
         align-items: center;
         margin: auto;
-        margin-top: 5%;}
-
-        .erv {
-    height:90%;
-align-items: center;
-margin-left: 0%;}
-    
-
-    
-}
-
-@media screen and (max-width:500px)  {
+        margin-top: 5%;
+    }
 
     .erv {
-    height:90%;}
-    
+        height: 90%;
+        align-items: center;
+        margin-left: 0%;
+    }
+
+
+
 }
 
-@media screen and (max-height:500px)  {
+@media screen and (max-width:500px) {
 
     .erv {
-    height:20%;
-margin-left: 0%;}
-    
+        height: 90%;
+    }
+
+}
+
+@media screen and (max-height:500px) {
+
+    .erv {
+        height: 20%;
+        margin-left: 0%;
+    }
+
 }
 
 
 
 
 
-.base3{height:25vh;
-  display: grid; 
-  grid-auto-columns: 1fr; 
-  grid-template-columns: 1fr; 
-  grid-template-rows: .75fr 1fr; 
-  gap: 0px 0px; 
-  grid-template-areas: 
-    "title3"
-    "tekst2";  }
+.base3 {
+    height: 25vh;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: .75fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "title3"
+        "tekst2";
+}
 
-    .title3{grid-area:title3;}
+.title3 {
+    grid-area: title3;
+}
 
-    .tekst2{grid-area:tekst2;
-    padding-left: 5%;}
+.tekst2 {
+    grid-area: tekst2;
+    padding-left: 5%;
+}
