@@ -161,7 +161,8 @@ color: #C5BABA;
 border:solid 1px #263548;
 border-radius:33px;
 width:95%;
-height:4vh;}
+height:6vh;
+margin-bottom: 3%;}
 
 textarea{background-color: #2a859a;
 color: #C5BABA;
@@ -169,7 +170,7 @@ color: #C5BABA;
 border:solid 1px #263548;
 border-radius:10px;
 width:95%;
-height:10vh;
+height:12vh;
 }
 
 
@@ -204,9 +205,10 @@ background-color: #263548;
     gap: 1vw;
     margin-top: 5%;
     margin-left: 5%;
+    margin-bottom: 2%;
     width: clamp(50px, 90vw, 5000px);
     border-radius: 30px;
-  height:50vh;
+  height:70vh;
   grid-auto-columns: 1fr; 
   grid-template-columns:  1fr ; 
   grid-template-rows: 20% 1fr ; 

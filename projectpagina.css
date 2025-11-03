@@ -69,16 +69,6 @@ header {
     align-content: flex-start;
 }
 
-.triangle2 {
-    height: 0vh;
-    border-top: 5vw solid transparent;
-    border-right: 7.5vw solid #D9D9D9;
-    border-bottom: 5vw solid transparent;
-    width: 6.5vw;
-    border-radius: 3%;
-    margin-left: -6vw;
-}
-
 nav {
     color: #D9D9D9;
     display: inline;
