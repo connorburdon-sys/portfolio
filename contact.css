@@ -60,7 +60,8 @@ justify-items: center;
 text-align:center ;}
 
     .title{grid-area:title;
-    margin-top:10% ;}
+    margin-top:10% ;
+margin-bottom: 7%;}
 
     .mail{grid-area:mail ;}
 
