@@ -5,13 +5,19 @@ body {
     width: 100%;
     margin: 0%;
     font-family: 'Montserrat', Arial, sans-serif;
-    background: url(images/Schermafbeelding\ 2025-10-29\ 143323.png);
+    background: url(/images/Background.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     height: 100vh;
     margin: 0;
+    font-family: "Futara";
+}
+
+@font-face {
+    font-family:"Futara";
+    src: url(/Font/FuturaCyrillicBold.ttf);
 }
 
 h2 {
@@ -22,8 +28,7 @@ h2 {
 header {
     background-color: #405E65;
     width: 100vw;
-    height: clamp(30px, 15vh, 300px);
-    font-family: 'Montserrat', Arial, sans-serif;
+    height: fit-content;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -44,7 +49,7 @@ h1 {
     margin-top: 5%;
     margin-left: 5%;
     width: clamp(50px, 90vw, 5000px);
-    height: 35vh;
+    height: 37.5vh;
     border-radius: 30px;
     display: grid;
     grid-auto-columns: 1fr;
@@ -67,6 +72,8 @@ h1 {
 
 .title {
     grid-area: title;
+    margin-left: 3.8%;
+    margin-bottom: 6%;
 }
 
 .text {
@@ -74,6 +81,7 @@ h1 {
     padding: 3%;
     padding-right: 10%;
     margin-right: 5%;
+    margin-top: -2%;
 }
 
 .overmij {
@@ -81,33 +89,35 @@ h1 {
 }
 
 .base:hover {
-    background-color: #2a859a;
+    background-color: #48575a;
     transition: 0.3s;
 }
 
 .base:active {
-    background-color: #206474;
+    background-color: #272e30;
     transition: 0.3s;
 }
 
 p {
-    color: #C5BABA;
-    font-size: 2vh;
+    color: #ffffff;
+    font-size: 2vw;
 }
 
 nav {
     color: #D9D9D9;
-    display: inline;
+    display: flex;
+    flex-direction: row;
     text-decoration: none;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    word-spacing: 2%;
+    font-family: "Futara";
     margin-top: 5vh;
-    margin-right: 3vw;
+   margin-right: 5vw;
+   gap: 2vw;
 }
 
 .link {
+    font-size: 1.5vw;
     text-decoration: none;
-    margin-right: 0.004%;
+    color: #ffffff;
 }
 
 .link:hover {
@@ -115,33 +125,30 @@ nav {
     text-decoration: wavy;
     text-decoration: none;
     transition: 0.3s;
-    font-size: large;
 }
 
 .link:active {
     color: #52657f;
     text-decoration: none;
-    font-size: x-large;
 }
 
 .link:visited {
-    color: #a9acb4;
+    color: #ffffff;
     text-decoration: none;
 }
 
 .mij {
-    border: 2px solid #293e42;
-    border-bottom-right-radius: 33px;
-    border-top-right-radius: 33px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
     grid-area: img;
-    height: 98.75%;
-    width: 100%;
-    max-height: 1000px;
-
+    height: 30vh;
+    max-height: 500px;
+    margin-right: 2vw;
 }
 
 #base2 {
     height: 40vh;
+    margin-top:5%;
     display: grid;
     grid-auto-columns: 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -149,33 +156,49 @@ nav {
     gap: 0px 0px;
     grid-template-areas:
         "title2 . . ."
-        "html css java desing";
+        ". img-box img-box txt";
     justify-items: center;
     align-items: flex-start;
 }
 
+.image-box {
+    grid-area:img-box;
+}
+
+.image-box img {
+    grid-area:img-box;
+    margin-top:-65%
+}
+
+.css{ width: 70% ;
+      transform: translateX(25px);
+}
+
+#erv-titel{ 
+    margin-top:10%
+}
+
+#erv-tekst{grid-area:txt;
+ font-size: 1.3vw;
+text-align : center}
+
+
+button {
+    background-color:#21365fd2;
+    color:white;
+    border-radius:50px;
+    margin-top:50%
+}
+
+button:hover {
+    background-color:#272e30;
+    transition:0.3s;
+}
+
+
 .title2 {
     grid-area: title2;
-}
-
-.htmlimg {
-    grid-area: html;
-    margin-left: 10%;
-}
-
-.cssimg {
-    grid-area: css;
-    margin-left: 10%;
-}
-
-.javaimg {
-    grid-area: java;
-    margin-left: 10%;
-}
-
-.disingimg {
-    grid-area: desing;
-    margin-left: 10%;
+    margin-left: 4%;
 }
 
 .erv {
@@ -185,7 +208,7 @@ nav {
     margin-left: 10%;
 }
 
-@media screen and (max-height: 900px) {
+@media screen and (max-height: 955px) {
 
     .erv {
         height: 40%;
@@ -194,6 +217,10 @@ nav {
 
     .base2 {
         height: fit-content;
+    }
+
+    .base p{
+        margin-top:-4%;
     }
 
 }
@@ -247,12 +274,9 @@ nav {
 
 }
 
-
-
-
-
 .base3 {
-    height: 25vh;
+    height: 35vh;
+    margin-bottom: 5%;
     display: grid;
     grid-auto-columns: 1fr;
     grid-template-columns: 1fr;
@@ -265,9 +289,20 @@ nav {
 
 .title3 {
     grid-area: title3;
+    margin-bottom: 6%;
+    margin-left: 4%;
 }
 
 .tekst2 {
     grid-area: tekst2;
-    padding-left: 5%;
+    margin-left:4%
+}
+
+::-webkit-scrollbar {
+    background-color:#405E65;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color:#263548;
+    border-radius:10px
 }

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="homepage.css">
+    <link rel="icon" type="icon" href="/images/logo.jpg">
+</head>
+
+
+<body>
+
+    <header>
+        <h1><b>Mijn portfolio<br>Connor Burdon</b></h1>
+        <nav>
+            <a class="link" href="#base2">over-mij</a>
+            <a class="link" href="/project/projectpagina.html">projecten</a>
+            <a class="link" href="/Contact/contact.html">contact</a>
+        </nav>
+    </header>
+
+    <div class="base">
+        <h1 class="title">Hoi, ik ben Connor</h1>
+        <p class="text">Ik ben een 16 jarige leerling bij het ICT college in Amersfoord.
+            Ik doe mijn best om steeds voortgang te maken in het vak dus in de komenden drie jaar word deze pagina
+            groter kwa inhoud en beter kwa code!
+        </p><img class="mij" src="/images/dit_ben_ik.jpg" alt="mij">
+    </div>
+
+    <div id="base2" class=" base">
+        <h1 class="title2">Wat ik leer / ken:</h1>
+        <button id="prev"><</button>
+
+<div class="image-box">
+    <img class="erv" src="/images/html_logo.png" alt="html">
+    <img class="erv css" src="/images/css_logo.png" alt="css">
+    <img class="erv" src="/images/javascript.png" alt="js">
+    <img class="erv" src="/images/Figma.png" alt="figma">
+    <img class="erv" src="/images/processing-logo.png" alt="processing">
+</div>
+
+<button id="next">></button>
+  <h2 id="erv-titel"></h2>
+            <p id="erv-tekst"></p>
+    </div>
+
+    <div class="base3 base">
+        <h1 class="title3">Over mij</h1>
+        <p class="tekst2">Ik houd erg veel van muziek voornamelijk rock mijn favoriete bands zijn Radiohead en Queens Of
+            The Stone Age.<br>
+            Ik ben ook fan van gamen momenteel probeer ik 100% te krijgen in silksong. Een van mijn anderen hobbies is
+            drummen ik ben nog well een beginner</p>
+    </div>
+
+<script>
+    let plaatjes = document.getElementsByClassName("erv");
+    let teller = 0;
+
+    function toonPlaatje() {
+        for (let i = 0; i < plaatjes.length; i++) {
+            plaatjes[i].style.display = "none";
+        }
+        plaatjes[teller].style.display = "inline-block";
+    }
+
+    document.getElementById("next").onclick = function () {
+        teller = teller + 1;
+        if (teller >= plaatjes.length) {
+            teller = 0;
+        }
+        toonPlaatje();
+    }
+
+    document.getElementById("prev").onclick = function () {
+        teller = teller - 1;
+        if (teller < 0) {
+            teller = plaatjes.length - 1;
+            console.log(teller);
+        }
+        toonPlaatje();
+    }
+
+    toonPlaatje();
+    
+    setInterval(updateText, 100);
+
+    function updateText() {
+    if(teller===0) {
+        document.getElementById("erv-titel").innerText = "Html";
+        document.getElementById("erv-tekst").innerText = "Html of Hypertext Markup Language is de eerste code-taal die ik heb geleerd. \n Ik heb deze taal gebruikt in elk project tot nu.";
+    }
+    else if(teller===1) {
+        document.getElementById("erv-titel").innerText = "Css";
+        document.getElementById("erv-tekst").innerText = "Css of Cascading Style Sheets is de tweede code-taal die ik samen met Html heb geleerd. \n Ik heb deze taal ook gebruikt in alles tot nu toe.";
+    }
+    else if(teller===2) {
+        document.getElementById("erv-titel").innerText = "Javascript";
+        document.getElementById("erv-tekst").innerText = "Javascript is de derde code-taal die ik geleerd heb. \n ik heb deze tot nut oe alleen gebruikt in de projecten uit periode 2.";
+    }
+    else if(teller===3) {
+        document.getElementById("erv-titel").innerText = "Figma";
+        document.getElementById("erv-tekst").innerText = "Figma is design software die ik gebruik om ontwerpen te maken voor mijn projecten. \n dit heb ik voor bijna elk project gedaan.";
+    }
+    else if(teller===4) {
+        document.getElementById("erv-titel").innerText = "Processing";
+        document.getElementById("erv-tekst").innerText = "Processing is software die ik voor basis programeren heb gebruikt. \n in processing werk ik met Java.";
+    }
+    }
+    
+</script>
+    
+</body>
+</html>

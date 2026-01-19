@@ -6,23 +6,24 @@ body {
     width: 100%;
     margin: 0%;
     background: url(images/Schermafbeelding\ 2025-10-29\ 143323.png);
-     background-size: cover;
-  background-position: center;   
-  background-repeat: no-repeat; 
-  background-attachment: fixed;  
-  height: 100vh;                 
-  margin: 0;        
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    margin: 0;
 }
 
 h1 {
     color: white;
     margin-left: 5%;
-    font-size: 2vw;}
+    font-size: 2vw;
+}
 
 header {
     background-color: #405E65;
     width: 100vw;
-    height:fit-content;
+    height: fit-content;
     font-family: 'Montserrat', Arial, sans-serif;
     display: flex;
     flex-direction: row;
@@ -69,33 +70,35 @@ header {
     align-content: flex-start;
 }
 
-.triangle2 {
-    height: 0vh;
-    border-top: 5vw solid transparent;
-    border-right: 7.5vw solid #D9D9D9;
-    border-bottom: 5vw solid transparent;
-    width: 6.5vw;
-    border-radius: 3%;
-    margin-left: -6vw;
-}
-
 nav {
     color: #D9D9D9;
     display: inline;
     text-decoration: none;
     font-size: 2vw;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     word-spacing: 2%;
     margin-top: 2vh;
     margin-right: 3%;
 }
 
 
+.link {
+    text-decoration: none;
+    padding: 3%;
+}
+
 .link:hover {
-    color: #405E65;
+    color: #58bbcfd4;
     text-decoration: wavy;
-    text-decoration: underline;
+    text-decoration: none;
     transition: 0.3s;
+    font-size: large;
+}
+
+.link:active {
+    color: #52657f;
+    text-decoration: none;
+    font-size: x-large;
 }
 
 .link:visited {
@@ -112,8 +115,9 @@ nav {
     align-items: center;
     color: #D9D9D9;
     font-family: 'Montserrat', Arial, sans-serif;
-    font-size:1.5vh;
+    font-size: 1.5vw;
     margin: -15%;
+    margin-left: 10%;
 }
 
 .goededoelimg {
