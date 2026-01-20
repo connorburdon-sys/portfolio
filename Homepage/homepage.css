@@ -62,14 +62,6 @@ h1 {
     align-items: center;
 }
 
-@media screen and (max-width: 950px) {
-
-    .mij {
-        display: none;
-    }
-
-}
-
 .title {
     grid-area: title;
     margin-left: 3.8%;
@@ -175,12 +167,15 @@ nav {
 }
 
 #erv-titel{ 
-    margin-top:10%
+    margin-top:10%;
+    margin-right: 15%;
 }
 
 #erv-tekst{grid-area:txt;
  font-size: 1.3vw;
-text-align : center}
+text-align : center;
+margin-top:-20%;
+margin-right: 15%;}
 
 
 button {
@@ -208,71 +203,6 @@ button:hover {
     margin-left: 10%;
 }
 
-@media screen and (max-height: 955px) {
-
-    .erv {
-        height: 40%;
-        margin-left: 0%;
-    }
-
-    .base2 {
-        height: fit-content;
-    }
-
-    .base p{
-        margin-top:-4%;
-    }
-
-}
-
-@media screen and (max-width:800px) {
-
-    #base2 {
-        width: 80vw;
-        height: 60vh;
-        display: grid;
-        grid-auto-columns: 1fr;
-        grid-template-columns: 1fr;
-        grid-template-rows: .75fr 20% 20% 20% 20%;
-        gap: 0px 0px;
-        grid-template-areas:
-            "title2"
-            "html"
-            "css"
-            "java"
-            "desing";
-        justify-items: center;
-        align-items: center;
-        margin: auto;
-        margin-top: 5%;
-    }
-
-    .erv {
-        height: 90%;
-        align-items: center;
-        margin-left: 0%;
-    }
-
-
-
-}
-
-@media screen and (max-width:500px) {
-
-    .erv {
-        height: 90%;
-    }
-
-}
-
-@media screen and (max-height:500px) {
-
-    .erv {
-        height: 20%;
-        margin-left: 0%;
-    }
-
-}
 
 .base3 {
     height: 35vh;
@@ -305,4 +235,108 @@ button:hover {
 ::-webkit-scrollbar-thumb {
     background-color:#263548;
     border-radius:10px
+}
+
+@media screen and (max-width:360px) {
+
+h1   {font-size:4.5vw;
+      text-align: center;}
+
+p    {font-size:3.5vw;
+      text-align: center;}
+
+.link{font-size:3vw}
+
+nav  {flex-direction:column;
+      margin-top: 3%;
+      margin-bottom: 3%;
+      margin-right: 5%;}
+
+::-webkit-scrollbar {display: none;}
+
+.mij {display:none;}
+
+.base {grid-template-areas:
+        "title"
+        "text";
+        grid-template-columns: 1fr ;
+        grid-template-rows: auto auto;
+        height: fit-content;
+        }
+
+    .title {margin: auto;
+            margin-top: 5%;
+            margin-bottom: 7.5%;}
+
+    .text  {margin: auto;
+            margin-bottom: 7.5%;
+            margin-left: 3%;
+            margin-right: 0%;}
+
+#base2 {grid-template-areas:
+        "title2"
+        "img-box";
+        grid-template-columns: 1fr ;
+        grid-template-rows: auto auto;
+        height: fit-content;
+        }
+
+    .title2 {margin: auto;
+             margin-top: 5%;
+             margin-bottom: 7.5%;}
+
+    .image-box {
+            margin-bottom: 0%;
+            margin-top: 50%;
+            margin-left: -20%;}
+
+    .image-box img{ 
+            width: 150%;}
+
+    .css{transform: translateX(-20px) translateY(-55px);
+    height: 210px; 
+    width :212px;
+    margin-bottom: -26.5%;}
+
+    #erv-tekst{display: none;}
+    #erv-titel{display:none}
+
+    #prev{margin-top: 0%;
+    margin-left: -50%;
+    margin-bottom: 5%;}
+    #next{margin-top: -13%;
+    margin-left: 55%;}
+
+    .base3{display: flex;
+    flex-direction: column;}
+
+ .title3 {
+    margin-left:0%;
+    margin-bottom: 6%;
+}
+
+.tekst2 {
+    margin-left:0%;
+    padding:3%
+}
+}
+
+@media screen and (max-width:568px) {
+
+}
+
+@media screen and (max-width:666px) {
+
+}
+
+@media screen and (max-width:768px) {
+
+}
+
+@media screen and (max-width:1024px) {
+
+}
+
+@media screen and (max-width:1300px) {
+
 }
