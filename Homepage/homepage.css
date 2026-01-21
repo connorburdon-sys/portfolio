@@ -4,7 +4,6 @@ body {
   height: 100%;
   width: 100%;
   margin: 0%;
-  font-family: "Montserrat", Arial, sans-serif;
   background: url(/images/Background.png);
   background-size: cover;
   background-position: center;
@@ -533,6 +532,6 @@ button:hover {
     }
     
     .base3{
-        height: 40%;
+        height: 50%;
     }
 }
