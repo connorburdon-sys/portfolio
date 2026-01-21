@@ -19,20 +19,66 @@
   </header>
 
   <div class="base" class="projecten">
-    <div class="goededoel"><a target="_blank" href="https://604915.klas4s25.ictcollege-amersfoort.nl/goededoel/"><img
-          class="goededoelimg" src="/images/goededoel.png" alt="goededoel"></a>
-      <h3>Het Goede Doel</h3>
-    </div>
+    <button id="prev"><</button>
 
-    <div class="gamecraft"><a target="_blank" href="https://604915.klas4s25.ictcollege-amersfoort.nl/goededoel/"><img
+    <div class="goededoel proj"><a target="_blank" href="https://604915.klas4s25.ictcollege-amersfoort.nl/goededoel/"><img
+          class="goededoelimg" src="/images/goededoel.png" alt="goededoel"></a>
+      <h3 class="iri">Het Goede Doel</h3>
+    </div>
+    
+
+    <div class="gamecraft proj"><a target="_blank" href="https://604915.klas4s25.ictcollege-amersfoort.nl/goededoel/"><img
           class="gamecraftimg" src="/images/Gamecraft.png" alt="Gamecraft"></a>
       <h3>Gamecraft</h3>
     </div>
 
-    <div class="game"><a target="_blank" href="https://604915.klas4s25.ictcollege-amersfoort.nl/goededoel/"><img
+    <div class="game proj"><a target="_blank" href="https://604915.klas4s25.ictcollege-amersfoort.nl/goededoel/"><img
           class="gameimg" src="/images/game.png" alt="game"></a>
       <h3>Rythm +</h3>
     </div>
-</body>
 
-</html>
+    <button id="next">></button>
+  </div>
+
+
+
+
+ <script>
+let plaatjes = document.getElementsByClassName("proj");
+let teller = 0;
+
+function toonPlaatje() {
+    for (let i = 0; i < plaatjes.length; i++) {
+        plaatjes[i].style.display = "none";
+    }
+    plaatjes[teller].style.display = "inline-block";
+}
+
+if (window.innerWidth < 850) {
+
+    document.getElementById("next").onclick = function () {
+        teller++;
+        if (teller >= plaatjes.length) teller = 0;
+        toonPlaatje();
+    };
+
+    document.getElementById("prev").onclick = function () {
+        teller--;
+        if (teller < 0) teller = plaatjes.length - 1;
+        toonPlaatje();
+    };
+
+    toonPlaatje();
+
+} else {
+    for (let i = 0; i < plaatjes.length; i++) {
+        plaatjes[i].style.display = "inline-block";
+    }
+
+    let button1= document.getElementById("next")
+    let button2= document.getElementById("prev")
+
+    button1.style.display= "none"
+    button2.style.display= "none"
+}
+</script>

@@ -1,7 +1,6 @@
 html,
 body {
     overflow-x: hidden;
-    overflow-y: hidden;
     height: 100%;
     width: 100%;
     margin: 0%;
@@ -126,3 +125,54 @@ margin-bottom:25%;}
 
 h3{text-align: center;
 color: #ffffff;}
+
+button {
+  background-color: #21365fd2;
+  color: white;
+  border-radius: 50px;
+  margin-top: 50%;
+}
+
+button:hover {
+  background-color: #272e30;
+  transition: 0.3s;
+}
+
+@media screen and (max-height:575px){
+    .goededoelimg{height: 100%;}
+    .gamecraftimg{margin-bottom:45%;}
+    .gameimg     {margin-bottom:25%;}
+}
+
+@media screen and (min-height:688px) {
+    .goededoel{height:63% ;}
+    .base{margin-top: 8%;}
+}
+
+@media screen and (max-height:700px) {
+    .base{height:400px;
+    margin-top:10% ;}
+}
+
+@media screen and (max-height:800px) {
+    .goededoelimg{height: 100%;}
+    .gamecraftimg{margin-bottom: 0%;}
+    .gameimg{margin-bottom: 0%;
+    margin-top: 6%;}
+}
+
+@media screen and (min-height:800px) {
+    .base{height:400px;
+    margin-top:20% ;}
+}
+
+@media screen and (max-width:850px) {
+    .proj{width: 40%;
+         border-radius: 10%;}
+    .goededoelimg{margin-top: 0%;}
+    .gameimg{margin-top:35%;}
+    .gamecraftimg{margin-top:50%;}
+    .base{height:70%;}
+     button{margin-top:-10%;}}
+
+
