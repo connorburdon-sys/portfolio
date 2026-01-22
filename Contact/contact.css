@@ -64,12 +64,12 @@ h1 {
 }
 
 
-.base:hover {
+.base:hover, #base2:hover{
   background-color: #48575a;
   transition: 0.3s;
 }
 
-.base:active {
+.base:active, #base2:active{
   background-color: #272e30;
   transition: 0.3s;
 }
@@ -228,4 +228,55 @@ textarea:focus{
   border-radius: 10px;
 }
 
+@media screen and (max-width:1500px){
+    .base{height: 20vw;}
+}
 
+@media screen and (max-width:600px) {
+    nav{flex-direction: column; 
+    margin-top: 4%;}
+
+    .link{font-size: 2vw;}
+
+    h1{font-size:3vw;}
+
+    .base{text-align: center;
+    height: fit-content;}
+
+    .title{margin-top: 5%;
+    margin-left:0%;}
+
+    li{padding: 5%;
+    margin-left:0%;}
+
+    #base2{height: 50%;}
+
+    .label1,.label2,.label3{font-size:3vw;
+    margin-left:0%;}
+
+    input, textarea, button{margin-left:0%;
+    padding: 5%;
+    width: 80%;}
+
+    input{height: 2vw;
+    margin-left: 4%;}
+
+    textarea{margin-left: 4%;}
+
+
+    .bevestig {
+        margin-left: 0%;
+        padding: 5%;
+        width: 80%;
+    }
+
+    
+}
+
+@media screen and (max-width:500px) {
+    ::-webkit-scrollbar{display: none;}
+}
+
+@media screen and (min-height:1000px){
+    #base2{height:50vh;}
+}
