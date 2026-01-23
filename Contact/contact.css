@@ -236,9 +236,20 @@ textarea:focus{
     nav{flex-direction: column; 
     margin-top: 4%;}
 
-    .link{font-size: 2vw;}
 
-    h1{font-size:3vw;}
+  h1 {
+    font-size: 4.5vw;
+    text-align: center;
+  }
+
+  p {
+    font-size: 3.5vw;
+    text-align: center;
+  }
+
+  .link {
+    font-size: 3vw;
+  }
 
     .base{text-align: center;
     height: fit-content;}
@@ -249,7 +260,7 @@ textarea:focus{
     li{padding: 5%;
     margin-left:0%;}
 
-    #base2{height: 50%;}
+    #base2{height: 70%;}
 
     .label1,.label2,.label3{font-size:3vw;
     margin-left:0%;}
@@ -269,7 +280,8 @@ textarea:focus{
         padding: 5%;
         width: 80%;
     }
-
+  
+    .btntxt{margin-top: -3%;}
     
 }
 

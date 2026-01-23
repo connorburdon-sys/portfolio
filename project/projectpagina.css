@@ -173,6 +173,9 @@ button:hover {
     .gameimg{margin-top:35%;}
     .gamecraftimg{margin-top:50%;}
     .base{height:70%;}
-     button{margin-top:-10%;}}
+     button{margin-top:-10%;}
+    nav{flex-direction: column;
+    margin-top:2%;
+  font-size:2vw;}}
 
 
