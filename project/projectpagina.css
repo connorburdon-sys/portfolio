@@ -139,13 +139,13 @@ button:hover {
 }
 
 @media screen and (max-height:575px){
-    .goededoelimg{height: 100%;}
     .gamecraftimg{margin-bottom:45%;}
     .gameimg     {margin-bottom:25%;}
 }
 
 @media screen and (min-height:688px) {
     .goededoel{height:63% ;}
+    .goededoelimg{height: 70%;}
     .base{margin-top: 8%;}
 }
 
@@ -155,27 +155,38 @@ button:hover {
 }
 
 @media screen and (max-height:800px) {
-    .goededoelimg{height: 100%;}
+    .goededoelimg{height: 80%;}
     .gamecraftimg{margin-bottom: 0%;}
-    .gameimg{margin-bottom: 0%;
-    margin-top: 6%;}
+    .gameimg{margin-bottom: 0%;}
 }
 
 @media screen and (min-height:800px) {
-    .base{height:400px;
-    margin-top:20% ;}
+    .base{
+    margin-top:5%;
+  margin-bottom: 5%;}
+    .goededoelimg{margin-top: 15%;
+    height: 25vw;}
 }
 
 @media screen and (max-width:850px) {
     .proj{width: 40%;
          border-radius: 10%;}
-    .goededoelimg{margin-top: 0%;}
-    .gameimg{margin-top:35%;}
-    .gamecraftimg{margin-top:50%;}
+    .goededoelimg{margin-top: 0%;
+    height: 100%;}
+    .gameimg{margin-top:0%;}
+    .gamecraftimg{margin-top:15%;}
     .base{height:70%;}
      button{margin-top:-10%;}
     nav{flex-direction: column;
-    margin-top:2%;
-  font-size:2vw;}}
+    margin-top:2%;}
 
+.link{font-size:2.5vw;}
+ h1{font-size:3vw;}}
 
+@media screen and (min-width:1000px) {
+.base{height:550px;}
+.gamecraftimg{margin-top:10%;}
+.gameimg{margin-top:0%;}
+.goededoelimg{margin-top:15%;
+height: 20vw;}
+}
