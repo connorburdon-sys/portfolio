@@ -1,29 +1,15 @@
-ik werk in vs code met een aantal extentions
+Hoi ik ben connor dit is mijn portfolio website. 
+mijn porfolio is een project waar ik elk periode updates moet brengen
+ik moet in deze website mijn gemaakten projecten zetten, over mijzelf vertellen en contact mogelijkhijden bieden
+de porfolio zal steeds beter worden aangezien ik steeds meer leer
 
-1: Live Server, dit gebruik ik om een lokale weergave van mijn code te zien
+hij bestaat uit 3 paginas
 
- 
-2: Prettier, ik gebruik dit om mijn code wat overzichtelijker te maken door formating
+1: Home
+hierin heb ik een korte introductie, een overzicht van wat ik leer en wat informatie over mij
 
- 
-3: HTML CSS Support, dit gebruik ik om de talen die ik het meeste gebruik beter te utalizeren
- 
-4: Copilot, ik gebruik copilot om code die ik niet begrijp uit te leggen
+2: projecten
+ik heb op mijn project pagina mijn gemaakten projecten staan
 
- 
-5:  CSS Peek gebruik ik om makelijk stijling te zien
-
-ik heb ook een custom theme enabled omdat deze beter laat zien waar haakjes eindigen en omdat het code overzichtelijker maakt.
-
-ik gebruik deze shortcuts:
-
-Ctrl + tab= switchen
-Ctrl + P = Openen
-! + Ctrl aan het begin = snelle boilerplate
-/ + Ctrl = comment
-Ctrl + O = snell openen
-Ctrl + J = Open Terminal
-Ctrl + B = close/open sidebar
-Ctrl + - = uitzoemen
-Ctrl + + = Inzoemen
-Ctrl + Shift + F = format
+3: contact
+hierop heb ik staan hoe je in contact met mij kan komen via mail, telefoon en github.
