@@ -47,7 +47,7 @@ h1 {
     margin-top: 5%;
     margin-left: 5%;
     width: clamp(50px, 90vw, 5000px);
-    height: 40vh;
+    height: fit-content;
     border-radius: 30px;
     display: flex;
     grid-auto-columns: 1fr;
@@ -132,6 +132,7 @@ input {
     background-color: #405e65;
     color: #C5BABA;
     font-size: 1vh;
+    border: none;
     border-radius: 33px;
     width: 95%;
     height: 6vh;
@@ -151,8 +152,10 @@ textarea {
     border-radius: 10px;
     width: 95%;
     height: 12vh;
+    border: none;
     resize:none;
     font-family:"Futara";
+    margin-top: 1%;
 }
 
 textarea:focus{
@@ -168,10 +171,12 @@ textarea:focus{
     font-size: 2vh;
     height: 6vh;
     width: 80%;
+    border:none;
     border-radius: 33px;
     grid-area: button;
     margin-left: 10%;
     margin-top: 2%;
+    margin-bottom: 5%;
 }
 
 .bevestig:hover {
@@ -194,7 +199,7 @@ textarea:focus{
     margin-bottom: 2%;
     width: clamp(50px, 90vw, 5000px);
     border-radius: 30px;
-    height: 70vh;
+    height: fit-content;
     grid-auto-columns: 1fr;
     grid-template-columns: 1fr;
     grid-template-rows: 20% 1fr;
@@ -208,6 +213,7 @@ textarea:focus{
 
 .label1 {
     grid-area: label1;
+   margin-bottom: 1%;
 }
 
 .label2 {
@@ -217,6 +223,7 @@ textarea:focus{
 .title2 {
     grid-area: title;
     margin-left: 5%;
+    margin-top: 3%;
 }
 
 ::-webkit-scrollbar {
@@ -226,10 +233,6 @@ textarea:focus{
 ::-webkit-scrollbar-thumb {
   background-color: #263548;
   border-radius: 10px;
-}
-
-@media screen and (max-width:1500px){
-    .base{height: 20vw;}
 }
 
 @media screen and (max-width:600px) {
@@ -251,13 +254,12 @@ textarea:focus{
     font-size: 3vw;
   }
 
-    .base{text-align: center;
-    height: fit-content;}
+    .base{text-align: center;}
 
     .title{margin-top: 5%;
     margin-left:0%;}
 
-    li{padding: 5%;
+    li{padding: 2%;
     margin-left:0%;}
 
     #base2{height: 70%;}

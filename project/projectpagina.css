@@ -93,35 +93,17 @@ nav {
   text-decoration: none;
 }
 
-.goededoel{background-color: black;
-height: 60%;
-width:20%;
-border-radius: 25%;}
-
-.goededoelimg{width:100%;
-height: auto;
-margin-top:-4%;
-border-radius: 25%;}
-
-.gamecraft{background-color: black;
+.proj{
 height: 63.5%;
 width:20%;
-border-radius: 25%;}
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-evenly;
+}
 
-.gamecraftimg{width:100%;
-height: auto;
-margin-top: 35%;
-margin-bottom:40%;}
-
-.game{background-color: black;
-height: 63.5%;
-width:20%;
-border-radius: 25%;}
-
-.gameimg{width:100%;
-height: auto;
-margin-top: 25%;
-margin-bottom:25%;}
+.img{width:100%;
+max-height:200px;}
 
 h3{text-align: center;
 color: #ffffff;}
@@ -137,15 +119,16 @@ button:hover {
   background-color: #272e30;
   transition: 0.3s;
 }
+    ::-webkit-scrollbar {
+  background-color: #405e65;
+}
 
-@media screen and (max-height:575px){
-    .gamecraftimg{margin-bottom:45%;}
-    .gameimg     {margin-bottom:25%;}
+::-webkit-scrollbar-thumb {
+  background-color: #263548;
+  border-radius: 10px;
 }
 
 @media screen and (min-height:688px) {
-    .goededoel{height:63% ;}
-    .goededoelimg{height: 70%;}
     .base{margin-top: 8%;}
 }
 
@@ -158,36 +141,23 @@ button:hover {
     .base{
     margin-top:5%;
   margin-bottom: 5%;}
-    .goededoelimg{margin-top: 15%;
-    height: 25vw;}
 }
 
 @media screen and (max-width:850px) {
-    .proj{width: 40%;
-         border-radius: 10%;}
-    .goededoelimg{margin-top: 0%;
-    height: 100%;}
-    .gameimg{margin-top:0%;}
-    .gamecraftimg{margin-top:15%;}
     .base{height:70%;}
      button{margin-top:-10%;}
     nav{flex-direction: column;
     margin-top:2%;}
+   .img{max-height:500px;}
+    .proj{width:80%;
+    height:fit-content;
+    margin-bottom:5%;}
 
 .link{font-size:2.5vw;}
  h1{font-size:3vw;}}
 
 @media screen and (min-width:1000px) {
 .base{height:550px;}
-.gamecraftimg{margin-top:10%;}
-.gameimg{margin-top:0%;}
-.goededoelimg{margin-top:15%;
-height: 20vw;}
 }
 
-@media screen and (max-height:800px) {
-    .goededoelimg{height: 60%;}
-    .gamecraftimg{margin-bottom: 0%;}
-    .gameimg{margin-bottom: 0%;}
-}
 
