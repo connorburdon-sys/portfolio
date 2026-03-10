@@ -63,17 +63,6 @@ h1 {
     margin-bottom: 3%;
 }
 
-
-.base:hover, #base2:hover{
-  background-color: #48575a;
-  transition: 0.3s;
-}
-
-.base:active, #base2:active{
-  background-color: #272e30;
-  transition: 0.3s;
-}
-
 p {
     color: #ffffff;
     font-size: 2vh;
@@ -124,20 +113,21 @@ label {
     color: #ffffff;
     font-size: 2vw;
     width: 100%;
-    margin-left: 3%;
+    margin-left: 4%;
     margin-bottom: 1%;
 }
 
 input {
-    background-color: #405e65;
+    background: linear-gradient(180deg, #405e65 0%, #263548 100%);
     color: #C5BABA;
     font-size: 1vh;
     border: none;
     border-radius: 33px;
-    width: 95%;
+    width: 92.5%;
     height: 6vh;
     margin-bottom: 3%;
     font-family:"Futara";
+    margin-left: 4%;
 }
 
 input:focus{
@@ -146,16 +136,17 @@ input:focus{
 }
 
 textarea {
-  background-color: #405e65;
+  background: linear-gradient(180deg, #405e65 0%, #263548 100%);
     color: #C5BABA;
     font-size: 1vh;
     border-radius: 10px;
-    width: 95%;
+    width: 92.5%;
     height: 12vh;
     border: none;
     resize:none;
     font-family:"Futara";
     margin-top: 1%;
+    margin-left: 4%;
 }
 
 textarea:focus{
@@ -165,7 +156,7 @@ textarea:focus{
 
 
 .bevestig {
-   background-color: #405e65;
+background: linear-gradient(180deg, #405e65 0%, #263548 100%);
     color: #ffffff;
     font-family: "Futara";
     font-size: 2vh;
