@@ -7,76 +7,147 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio</title>
   <link rel="stylesheet" href="projectpagina.css">
+  <link rel="stylesheet" href="/common.css">
 
 
 </head>
 
 <body>
   <header>
-    <h1><b>Mijn portfolio<br>Connor Burdon</b><br>Projecten</h1>
-    <nav><a class="link" href="/index.html">Home</a>
-          <a class="link" href="/Contact/contact.html">Contact</a></nav>
+    <h1><b>Mijn portfolio<br>Projecten</b></h1>
+    <nav>
+      <a class="link" href="/Homepage/index.html">Home</a>
+      <a class="link" href="/Homepage/index.html#base2">Over mij</a>
+      <a class="link" href="/Contact/contact.html">contact</a>
+    </nav>
   </header>
 
-  <div class="base" class="projecten">
-    <button id="prev"><</button>
+  <main class="base">
+    <button class="btn" id="prev" aria-label="Vorige project">‹</button>
 
-    <div class="proj"><a target="_blank" href="https://604915.klas4s25.ictcollege-amersfoort.nl/goededoel/"><img
-          class="img" src="/images/goededoel.png" alt="goededoel"></a>
-      <h3>Het Goede Doel</h3>
-    </div>
-    
+    <section class="image-box">
+      <div class="frame">
+        <a id="link" target="_blank" href="https://604915.klas4s25.ictcollege-amersfoort.nl/Gamecraft/">
+          <img class="img" id="img" src="/images/Gamecraft.png" alt="Gamecraft">
+        </a>
+      </div>
+    </section>
 
-    <div class="proj"><a target="_blank" href="https://604915.klas4s25.ictcollege-amersfoort.nl/Gamecraft/"><img
-          class="img" src="/images/Gamecraft.png" alt="Gamecraft"></a>
-      <h3>Gamecraft</h3>
-    </div>
+    <section class="text">
+      <h2 id="title">Gamecraft</h2>
+      <p id="tekst">
+        voor dit project heb ik voor het eerst in een team gewerkt. de opdracht was om
+        met HTML, CSS en JS een site te maken waarop er games gehost moesten worden.
+      </p>
+      <div class="dots" id="dots" aria-label="Project navigatie"></div>
+    </section>
 
-    <div class="proj"><a target="_blank" href="https://604915.klas4s25.ictcollege-amersfoort.nl/Game/"><img
-          class="img" src="/images/game.png" alt="game"></a>
-      <h3>Rythm +</h3>
-    </div>
+    <button class="btn" id="next" aria-label="Volgende project">›</button>
+  </main>
 
-    <button id="next">></button>
-  </div>
+  <script>
+    const projects = [
+      {
+        title: "Gamecraft",
+        text: "voor dit project heb ik voor het eerst in een team gewerkt. de opdracht was om met HTML, CSS en JS een site te maken waarop er games gehost moesten worden.",
+        image: "/images/Gamecraft.png",
+        alt: "Gamecraft",
+        link: "https://604915.klas4s25.ictcollege-amersfoort.nl/Gamecraft/"
+      },
+      {
+        title: "Het Goede Doel",
+        text: "dit project was een website voor een goed doel. ik heb hier vooral gewerkt aan de layout, styling en het duidelijk presenteren van de informatie.",
+        image: "/images/goededoel.png",
+        alt: "Het Goede Doel",
+        link: "https://604915.klas4s25.ictcollege-amersfoort.nl/goededoel/"
+      },
+      {
+        title: "Rythm +",
+        text: "bij dit project heb ik gewerkt aan een spelwebsite. hierbij heb ik vooral geleerd hoe je interactie toevoegt met HTML, CSS en JavaScript.",
+        image: "/images/game.png",
+        alt: "Rythm Plus",
+        link: "https://604915.klas4s25.ictcollege-amersfoort.nl/Game/"
+      }
+    ];
 
+    const t = document.getElementById("title");
+    const txt = document.getElementById("tekst");
+    const img = document.getElementById("img");
+    const link = document.getElementById("link");
+    const dots = document.getElementById("dots");
+    const box = document.querySelector(".base");
+    const p = document.getElementById("prev");
+    const n = document.getElementById("next");
 
+    let current = 0;
+    let timer;
 
-
- <script>
-let plaatjes = document.getElementsByClassName("proj");
-let teller = 0;
-
-function toonPlaatje() {
-    for (let i = 0; i < plaatjes.length; i++) {
-        plaatjes[i].style.display = "none";
+    function renderDots() {
+      dots.innerHTML = "";
+      projects.forEach((_, index) => {
+        const dot = document.createElement("button");
+        dot.type = "button";
+        dot.className = index === current ? "dot active" : "dot";
+        dot.setAttribute("aria-label", `Ga naar project ${index + 1}`);
+        dot.addEventListener("click", () => {
+          current = index;
+          updateProject();
+          restartAutoRotate();
+        });
+        dots.appendChild(dot);
+      });
     }
-    plaatjes[teller].style.display = "inline-block";
-}
 
-if (window.innerWidth < 850) {
+    function updateProject() {
+      const project = projects[current];
+      box.classList.remove("fade");
+      void box.offsetWidth;
+      box.classList.add("fade");
 
-    document.getElementById("next").onclick = function () {
-        teller++;
-        if (teller >= plaatjes.length) teller = 0;
-        toonPlaatje();
-    };
+      t.textContent = project.title;
+      txt.textContent = project.text;
+      img.src = project.image;
+      img.alt = project.alt;
+      link.href = project.link;
 
-    document.getElementById("prev").onclick = function () {
-        teller--;
-        if (teller < 0) teller = plaatjes.length - 1;
-        toonPlaatje();
-    };
+      [...dots.children].forEach((dot, index) => {
+        dot.classList.toggle("active", index === current);
+      });
+    }
 
-    toonPlaatje();
+    function nextProject() {
+      current = (current + 1) % projects.length;
+      updateProject();
+    }
 
-} else {
+    function prevProject() {
+      current = (current - 1 + projects.length) % projects.length;
+      updateProject();
+    }
 
-    let button1= document.getElementById("next")
-    let button2= document.getElementById("prev")
+    function restartAutoRotate() {
+      clearInterval(timer);
+      timer = setInterval(nextProject, 4500);
+    }
 
-    button1.style.display= "none"
-    button2.style.display= "none"
-}
-</script>
+    p.addEventListener("click", () => {
+      prevProject();
+      restartAutoRotate();
+    });
+
+    n.addEventListener("click", () => {
+      nextProject();
+      restartAutoRotate();
+    });
+
+    box.addEventListener("mouseenter", () => clearInterval(timer));
+    box.addEventListener("mouseleave", restartAutoRotate);
+
+    renderDots();
+    updateProject();
+    restartAutoRotate();
+  </script>
+
+</body>
+</html>
 

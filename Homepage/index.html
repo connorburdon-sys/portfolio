@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
     <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="/common.css">
     <link rel="icon" type="icon" href="/images/logo.jpg">
 </head>
 
@@ -15,9 +16,9 @@
     <header>
         <h1><b>Mijn portfolio<br>Connor Burdon</b></h1>
         <nav>
-            <a class="link" href="#base2">over-mij</a>
-            <a class="link" href="/project/projectpagina.html">projecten</a>
-            <a class="link" href="/Contact/contact.html">contact</a>
+            <a class="link" href="/Homepage/index.html">Home</a>
+            <a class="link" href="/project/projectpagina.html">Projecten</a>
+            <a class="link" href="/Contact/contact.html">Contact</a>
         </nav>
     </header>
 
@@ -31,19 +32,18 @@
 
     <div id="base2" class=" base">
         <h1 class="title2">Wat ik leer / ken:</h1>
-        <button id="prev"><</button>
+        <button class="btn" id="prev" aria-label="Vorige vaardigheid">‹</button>
 
-<div class="image-box">
-    <img class="erv" src="/images/html_logo.png" alt="html">
-    <img class="erv css" src="/images/css_logo.png" alt="css">
-    <img class="erv" src="/images/javascript.png" alt="js">
-    <img class="erv" src="/images/Figma.png" alt="figma">
-    <img class="erv" src="/images/processing-logo.png" alt="processing">
-</div>
+        <div class="image-box">
+            <a id="skill-link" href="#" target="_blank" rel="noreferrer">
+                <img class="erv" id="skill-image" src="/images/html_logo.png" alt="html">
+            </a>
+        </div>
 
-<button id="next">></button>
-  <h2 id="erv-titel"></h2>
-            <p id="erv-tekst"></p>
+        <button class="btn" id="next" aria-label="Volgende vaardigheid">›</button>
+        <h2 id="erv-titel"></h2>
+        <p id="erv-tekst"></p>
+        <div class="dots" id="roulette-dots" aria-label="Vaardigheden navigatie"></div>
     </div>
 
     <div class="base3 base">
@@ -57,17 +57,6 @@
     <div class="base4 base">
         <h1 class="title4">Blog</h1>
         <p class="tekst3">Hier post ik elke sprint een update over wat ik gedaan heb</p>
-        <!--<?php 
-
-//$servername = "...";
-//$username   = "...";
-//$password   = "...";
-//$dbname     = "...";
-
-//$conn = new mysqli($servername, $username, $password, $dbname);
-
-//$blog = $pdo->query("...")->fetchAll(PDO::FETCH_ASSOC);
-        ?>-->
         
         
  <div class="blogpost">
@@ -76,60 +65,115 @@
 </div>
 
 <script>
-    let plaatjes = document.getElementsByClassName("erv");
-    let teller = 0;
-
-    function toonPlaatje() {
-        for (let i = 0; i < plaatjes.length; i++) {
-            plaatjes[i].style.display = "none";
+    const skills = [
+        {
+            title: "Html",
+            text: "Html of Hypertext Markup Language is de eerste code-taal die ik heb geleerd. Ik heb deze taal gebruikt in elk project tot nu.",
+            image: "/images/html_logo.png",
+            alt: "html"
+        },
+        {
+            title: "Css",
+            text: "Css of Cascading Style Sheets is de tweede code-taal die ik samen met Html heb geleerd. Ik heb deze taal ook gebruikt in alles tot nu toe.",
+            image: "/images/css_logo.png",
+            alt: "css"
+        },
+        {
+            title: "Javascript",
+            text: "Javascript is de derde code-taal die ik geleerd heb. Ik heb deze tot nu toe alleen gebruikt in de projecten uit periode 2.",
+            image: "/images/javascript.png",
+            alt: "javascript"
+        },
+        {
+            title: "Figma",
+            text: "Figma is design software die ik gebruik om ontwerpen te maken voor mijn projecten. Dit heb ik voor bijna elk project gedaan.",
+            image: "/images/Figma.png",
+            alt: "figma"
+        },
+        {
+            title: "Processing",
+            text: "Processing is software die ik voor basis programmeren heb gebruikt. In Processing werk ik met Java.",
+            image: "/images/processing-logo.png",
+            alt: "processing"
         }
-        plaatjes[teller].style.display = "inline-block";
+    ];
+
+    const t = document.getElementById("erv-titel");
+    const txt = document.getElementById("erv-tekst");
+    const img = document.getElementById("skill-image");
+    const link = document.getElementById("skill-link");
+    const dots = document.getElementById("roulette-dots");
+    const box = document.getElementById("base2");
+    const p = document.getElementById("prev");
+    const n = document.getElementById("next");
+
+    let current = 0;
+    let timer;
+
+    function renderDots() {
+        dots.innerHTML = "";
+        skills.forEach((_, index) => {
+            const dot = document.createElement("button");
+            dot.type = "button";
+            dot.className = index === current ? "dot active" : "dot";
+            dot.setAttribute("aria-label", `Ga naar vaardigheid ${index + 1}`);
+            dot.addEventListener("click", () => {
+                current = index;
+                updateSkill();
+                restartAutoRotate();
+            });
+            dots.appendChild(dot);
+        });
     }
 
-    document.getElementById("next").onclick = function () {
-        teller = teller + 1;
-        if (teller >= plaatjes.length) {
-            teller = 0;
-        }
-        toonPlaatje();
+    function updateSkill() {
+        const skill = skills[current];
+        box.classList.remove("fade");
+        void box.offsetWidth;
+        box.classList.add("fade");
+
+        t.textContent = skill.title;
+        txt.textContent = skill.text;
+        img.src = skill.image;
+        img.alt = skill.alt;
+        link.href = "#";
+
+        [...dots.children].forEach((dot, index) => {
+            dot.classList.toggle("active", index === current);
+        });
     }
 
-    document.getElementById("prev").onclick = function () {
-        teller = teller - 1;
-        if (teller < 0) {
-            teller = plaatjes.length - 1;
-            console.log(teller);
-        }
-        toonPlaatje();
+    function nextSkill() {
+        current = (current + 1) % skills.length;
+        updateSkill();
     }
 
-    toonPlaatje();
-    
-    setInterval(updateText, 100);
+    function prevSkill() {
+        current = (current - 1 + skills.length) % skills.length;
+        updateSkill();
+    }
 
-    function updateText() {
-    if(teller===0) {
-        document.getElementById("erv-titel").innerText = "Html";
-        document.getElementById("erv-tekst").innerText = "Html of Hypertext Markup Language is de eerste code-taal die ik heb geleerd. \n Ik heb deze taal gebruikt in elk project tot nu.";
+    function restartAutoRotate() {
+        clearInterval(timer);
+        timer = setInterval(nextSkill, 4500);
     }
-    else if(teller===1) {
-        document.getElementById("erv-titel").innerText = "Css";
-        document.getElementById("erv-tekst").innerText = "Css of Cascading Style Sheets is de tweede code-taal die ik samen met Html heb geleerd. \n Ik heb deze taal ook gebruikt in alles tot nu toe.";
-    }
-    else if(teller===2) {
-        document.getElementById("erv-titel").innerText = "Javascript";
-        document.getElementById("erv-tekst").innerText = "Javascript is de derde code-taal die ik geleerd heb. \n ik heb deze tot nut oe alleen gebruikt in de projecten uit periode 2.";
-    }
-    else if(teller===3) {
-        document.getElementById("erv-titel").innerText = "Figma";
-        document.getElementById("erv-tekst").innerText = "Figma is design software die ik gebruik om ontwerpen te maken voor mijn projecten. \n dit heb ik voor bijna elk project gedaan.";
-    }
-    else if(teller===4) {
-        document.getElementById("erv-titel").innerText = "Processing";
-        document.getElementById("erv-tekst").innerText = "Processing is software die ik voor basis programeren heb gebruikt. \n in processing werk ik met Java.";
-    }
-    }
-    
+
+    p.addEventListener("click", () => {
+        prevSkill();
+        restartAutoRotate();
+    });
+
+    n.addEventListener("click", () => {
+        nextSkill();
+        restartAutoRotate();
+    });
+
+    box.addEventListener("mouseenter", () => clearInterval(timer));
+    box.addEventListener("mouseleave", restartAutoRotate);
+
+    renderDots();
+    updateSkill();
+    restartAutoRotate();
 </script>
     
 </body>

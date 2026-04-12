@@ -45,7 +45,9 @@ h1 {
   gap: 1vw;
   margin-top: 5%;
   margin-left: 5%;
-  width: clamp(50px, 90vw, 5000px);
+  width: 90vw;
+  min-width: 50px;
+  max-width: 5000px;
   height: 37.5vh;
   border-radius: 30px;
   display: grid;
@@ -127,56 +129,104 @@ nav {
 }
 
 #base2 {
-  height: 30vh;
+  min-height: 30vh;
   margin-top: 5%;
   display: grid;
-  grid-auto-columns: 1fr;
-  grid-template-columns: 0.1fr 0.5fr 0.1fr 0.1fr 1fr;
-  grid-template-rows: 1fr 1fr 0.75fr;
+  grid-template-columns: 72px 320px 1fr 72px;
+  grid-template-rows: auto auto auto;
   gap: 0px 0px;
   grid-template-areas:
-    ". title2 . . ttl"
-    "prev img-box next  . txt"
-    "prev img-box next . .";
+    "title2 title2 title2 title2"
+    "prev img-box txt next"
+    ". img-box txt .";
   justify-items: center;
-  align-items: flex-start;
+  align-items: center;
+  position: relative;
 }
 
 .image-box {
   grid-area: img-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .image-box img {
   grid-area: img-box;
-
+  display: block;
+  width: auto;
+  height: 165px;
+  object-fit: contain;
 }
 
 .css {
-  width: 70%;
-  transform: translateX(25px);
+  width: auto;
+  height: 165px;
+  transform: none;
 }
 
 #erv-titel {
-  grid-area: ttl;
+  grid-area: txt;
+  align-self: end;
+  justify-self: start;
+  margin: 0;
 }
 
 #erv-tekst {
   grid-area: txt;
+  align-self: start;
+  justify-self: start;
   font-size: 1.3vw;
-  text-align: center;
+  text-align: left;
+  max-width: 38vw;
+  margin-top: 3rem;
 }
 
-button {
-  background-color: #21365fd2;
-  color: white;
-  border-radius: 50px;
+#prev {
+  grid-area: prev;
 }
-#prev{grid-area: prev;}
-#next{grid-area: next;}
 
-button:hover {
-  background-color: #272e30;
-  transition: 0.3s;
+#next {
+  grid-area: next;
+}
+
+.dots {
+  grid-column: 2 / 4;
+  display: flex;
+  gap: 0.65rem;
+  margin-top: 1.25rem;
+  justify-content: center;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.35);
+  cursor: pointer;
+  padding: 0;
+}
+
+.dot.active {
+  background: #ffffff;
+  transform: scale(1.15);
+}
+
+.fade {
+  animation: fadeIn 0.28s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.25;
+    transform: translateY(4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .title2 {
@@ -252,13 +302,13 @@ margin-bottom: 3%;
     margin-right: 5%;
   }
 
-.css {
-  width: 70%;
-  transform: translateX(25px);
-}
+  .css {
+    width: 70%;
+    transform: translateX(25px);
+  }
 
- .title2{margin-top: 25%;}
- #erv-titel{margin-top: 25%;}
+  .title2{margin-top: 25%;}
+  #erv-titel{margin-top: 25%;}
   }
 
 @media screen and (max-width: 1500px) {
@@ -320,12 +370,16 @@ margin-bottom: 3%;
   }
 
   #base2 {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto;
     grid-template-areas:
-      ". title2 ."
-      "prev img-box next";
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto;
+      "title2"
+      "img-box"
+      "prev"
+      "next"
+      "txt";
     height: fit-content;
+    justify-items: center;
   }
 
   .title2 {
@@ -350,10 +404,26 @@ margin-bottom: 3%;
   }
 
   #erv-tekst {
-    display: none;
+    max-width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 3.5vw;
   }
+
   #erv-titel {
-    display: none;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .btn {
+    width: 48px;
+    height: 48px;
+    font-size: 1.8rem;
+  }
+
+  .dots {
+    grid-column: auto;
+    margin-top: 0.5rem;
   }
 
   .base3 {
