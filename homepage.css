@@ -26,7 +26,7 @@ h2 {
 
 header {
   background-color: #405e65;
-  width: 100vw;
+  width: 100%;
   height: fit-content;
   display: flex;
   flex-direction: row;
@@ -44,7 +44,8 @@ h1 {
   background-color: #263548;
   gap: 1vw;
   margin-top: 5%;
-  margin-left: 5%;
+  margin-left: auto;
+  margin-right: auto;
   width: 90vw;
   min-width: 50px;
   max-width: 5000px;
@@ -138,7 +139,7 @@ nav {
   grid-template-areas:
     "title2 title2 title2 title2"
     "prev img-box txt next"
-    ". img-box txt .";
+    "prev img-box dots next";
   justify-items: center;
   align-items: center;
   position: relative;
@@ -191,10 +192,10 @@ nav {
 }
 
 .dots {
-  grid-column: 2 / 4;
+  grid-area: dots;
   display: flex;
   gap: 0.65rem;
-  margin-top: 1.25rem;
+  margin-top: 1rem;
   justify-content: center;
 }
 
@@ -370,16 +371,16 @@ margin-bottom: 3%;
   }
 
   #base2 {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto auto;
+    grid-template-columns: 56px 1fr 56px;
+    grid-template-rows: auto auto auto auto;
     grid-template-areas:
-      "title2"
-      "img-box"
-      "prev"
-      "next"
-      "txt";
+      "title2 title2 title2"
+      "dots dots dots"
+      "prev img-box next"
+      "txt txt txt";
     height: fit-content;
     justify-items: center;
+    align-items: center;
   }
 
   .title2 {
@@ -393,7 +394,8 @@ margin-bottom: 3%;
   }
 
   .image-box img {
-    width: 100%;
+    width: auto;
+    height: 140px;
   }
 
   .css {
@@ -422,8 +424,9 @@ margin-bottom: 3%;
   }
 
   .dots {
-    grid-column: auto;
+    grid-area: dots;
     margin-top: 0.5rem;
+    margin-bottom: 0.75rem;
   }
 
   .base3 {
@@ -505,10 +508,12 @@ margin-bottom: 3%;
 
   #base2 {
     grid-template-areas:
-      ". title2 ."
-      "prev img-box next";
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto;
+      "title2 title2 title2"
+      "dots dots dots"
+      "prev img-box next"
+      "txt txt txt";
+    grid-template-columns: 48px 1fr 48px;
+    grid-template-rows: auto auto auto auto;
     height: fit-content;
   }
 
@@ -525,10 +530,17 @@ margin-bottom: 3%;
   }
 
   #erv-tekst {
-    display: none;
+    display: block;
+    max-width: 100%;
+    text-align: center;
+    font-size: 3.7vw;
+    margin-top: 0.75rem;
   }
+
   #erv-titel {
-    display: none;
+    display: block;
+    text-align: center;
+    margin-top: 0.5rem;
   }
 
   .base3 {

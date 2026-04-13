@@ -38,6 +38,7 @@ nav {
   grid-template-columns: 72px 320px 1fr 72px;
   align-items: center;
   gap: 2rem;
+  position: relative;
 }
 
 .image-box {
@@ -150,6 +151,9 @@ nav {
 
   .base {
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "img"
+      "text";
     justify-items: center;
     text-align: center;
     padding: 2rem 1.5rem;
@@ -166,10 +170,25 @@ nav {
 
   #prev,
   #next {
-    display: none;
+    position: absolute;
+    top: 42%;
+    transform: translateY(-50%);
+    z-index: 3;
   }
 
+  #prev {
+    left: 0.8rem;
+  }
+
+  #next {
+    right: 0.8rem;
+  }
+
+  .image-box { grid-area: img; }
+  .text { grid-area: text; }
+
   .frame {
+    width: min(78vw, 280px);
     max-width: 280px;
     min-height: 360px;
   }
@@ -189,16 +208,21 @@ nav {
 
 @media screen and (max-width: 600px) {
   .base {
-    width: 92vw;
+    width: 96vw;
     margin-top: 3vh;
     border-radius: 36px;
-    padding: 1.5rem 1.1rem 2rem;
+    padding: 1.25rem 0.8rem 2rem;
   }
 
   .frame {
-    width: 100%;
+    width: min(80vw, 250px);
     min-height: 290px;
     padding: 1.25rem;
+  }
+
+  #prev,
+  #next {
+    top: 34%;
   }
 
   .text h2 {
