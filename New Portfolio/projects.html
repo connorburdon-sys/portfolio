@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Projects by Connor Burdon." />
+    <title>Projects - Connor Burdon</title>
+    <icon rel="icon" type="image/x-icon" href="../images/logo - kopie.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/projects.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="/">
+          <image class="brand-logo" src="../images/logo.png" alt="CB" />
+        </a>
+        <nav aria-label="Main navigation">
+          <a class="nav-link" href="/New Portfolio/index.html">Home</a>
+          <a class="nav-link active" href="/New Portfolio/projects.html">Projects</a>
+          <a class="nav-link" href="/New Portfolio/contact.html">Contact</a>
+        </nav>
+        <div class="availability"><span></span>Currently interning</div>
+      </header>
+
+      <main>
+        <section class="page-intro">
+          <p class="eyebrow">// Projects · 2025—26</p>
+          <h1>Things I’ve <em>made.</em></h1>
+          <p class="page-intro-copy">
+            A collection of school projects I made while studying ICT in Amersfoort.
+          </p>
+        </section>
+
+        <section class="current-work">
+          <div>
+            <p class="eyebrow">What I’m learning</p>
+          </div>
+          <div>
+            <p class="current-work-copy">
+              I started with HTML and CSS, and have since added JavaScript, PHP, MySQL,
+              and C# to my projects. I also use Figma to plan and design my work.
+            </p>
+            <div class="tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              <span>PHP</span><span>MySQL</span><span>C#</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="projects-section">
+          <div class="section-heading filters-heading">
+            <div>
+              <p class="eyebrow">// All projects</p>
+              <h2 class="section-title">My projects</h2>
+            </div>
+            <div class="filters" aria-label="Filter projects">
+              <button class="filter active" data-filter="All" type="button">All</button>
+              <button class="filter" data-filter="HTML" type="button">HTML</button>
+              <button class="filter" data-filter="CSS" type="button">CSS</button>
+              <button class="filter" data-filter="JavaScript" type="button">JavaScript</button>
+              <button class="filter" data-filter="PHP" type="button">PHP</button>
+              <button class="filter" data-filter="MySQL" type="button">MySQL</button>
+              <button class="filter" data-filter="C#" type="button">C#</button>
+              <span class="year-filters" aria-label="Filter by school year">
+                <button class="filter" data-filter="First year" type="button">First year</button>
+                <button class="filter" data-filter="Second year" type="button">Second year</button>
+              </span>
+            </div>
+          </div>
+          <div class="project-list" id="project-list"></div>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="js/projects.js"></script>
+  </body>
+</html>

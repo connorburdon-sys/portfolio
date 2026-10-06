@@ -77,10 +77,10 @@ a:focus-visible {
 
 .brand-logo {
   display: grid;
-  width: 2.75rem;
-  height: 2.25rem;
+  width: 2.5rem;
+  height: 2.5rem;
   place-items: center;
-  border-radius: 0.35rem;
+  border-radius: 0.15rem;
   background: var(--green);
   font-size: 0.75rem;
 }
