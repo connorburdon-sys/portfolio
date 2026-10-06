@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio of Connor Burdon." />
+    <title>Portfolio - Connor Burdon</title>
+    <link rel="icon" type="image/x-icon" href="../images/logo - kopie.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/home.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="/">
+          <img class="brand-logo" src="../images/logo.png" alt="Connor Burdon logo" />
+       </a>
+        <nav aria-label="Main navigation">
+          <a class="nav-link active" href="/">Home</a>
+          <a class="nav-link" href="/projects.html">Projects</a>
+          <a class="nav-link" href="/contact.html">Contact</a>
+        </nav>
+        <div class="availability"><span></span>Currently interning</div>
+      </header>
+
+      <main>
+        <section class="hero">
+          <p class="eyebrow">Hello, I’m Connor Burdon</p>
+          <h1>I build <em>Coding Projects</em></h1>
+          <p class="hero-copy">
+            I've been coding for a year now and have gotten some experience in HTML, CSS, JavaScript, PHP, SQL and C#.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="/projects.html">View my work <span>→</span></a>
+            <a class="button button-outline" href="/contact.html">
+              Contact <span>→</span>
+            </a>
+          </div>
+        </section>
+
+        <section class="home-projects">
+          <div class="section-heading">
+            <div>
+              <h2 class="section-title">Most Recent Project</h2>
+            </div>
+          </div>
+
+          <div class="project-grid">
+            <article class="project-card">
+              <div class="project-visual light">
+                <div class="project-logo-lockup">
+                  <div class="project-logo">
+                    <img src="../images/logo.png" alt="Loop logo" />
+                  </div>
+                  <div class="project-brand-name">
+                    <strong>My Event Site</strong>
+                    <br>
+                    <span>Post your events</span>
+                  </div>
+                </div>
+                <strong class="project-visual-name">View live demo</strong>
+              </div>
+              <div class="project-info">
+                <p class="project-meta">Event listing site · 2025</p>
+                <h3 class="project-name">My Event Site</h3>
+                <p class="project-description">
+                  On this site you can create events and join them.
+                  Built for Crud practice using OOP PHP
+                </p>
+                <div class="project-tags">
+                  <span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span><span>MySQL</span>
+                </div>
+              </div>
+            </article>
+          </div>
+          <a class="button button-outline more-projects" href="/projects.html">
+            See more projects <span>→</span>
+          </a>
+        </section>
+
+        <section class="cd-player">
+          <div class="cd-crop" aria-hidden="true"><div class="cd" id="cd"></div></div>
+          <div class="cd-title" id="cd-title">
+            <span>01 / 04</span><strong>Gaming</strong>
+          </div>
+          <div class="hobby-content">
+            <p class="eyebrow">// Hobbies</p>
+            <p class="hobby-description" id="hobby-description">
+              I love video games, currently im loving metroidvanias. my favvorite game of all time will always be terarria though.
+            </p>
+            <div class="cd-controls">
+              <button id="previous-hobby" type="button">← Previous</button>
+              <button id="next-hobby" type="button">Next →</button>
+            </div>
+            <div class="hobby-progress" id="hobby-progress"></div>
+          </div>
+        </section>
+
+        <section class="contact-preview">
+          <div class="contact-preview-box">
+            <p class="eyebrow">Contact me</p>
+            <h2 class="contact-preview-title">Ask me anything</h2>
+            <a class="button" href="/contact.html">Email me <span>→</span></a>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="js/home.js"></script>
+  </body>
+</html>
