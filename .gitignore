@@ -1,0 +1,7 @@
+**/bin/
+**/obj/
+**/keys/
+
+New Portfolio/backend/appsettings.Development.json
+New Portfolio/backend/appsettings.json
+New Portfolio/backend/uploads/

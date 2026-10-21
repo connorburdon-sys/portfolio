@@ -1,0 +1,117 @@
+:root {
+  --green: #065e47;
+  --line: #ddd;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 2rem 1rem;
+  background: #f2f4f2;
+  color: #222;
+  font: 16px/1.5 system-ui, sans-serif;
+}
+
+main {
+  width: min(100%, 900px);
+  margin: auto;
+}
+
+a {
+  color: var(--green);
+}
+
+h1 {
+  margin: 1rem 0 2rem;
+}
+
+h2 {
+  margin: 2rem 0 0.75rem;
+}
+
+/* Forms */
+form {
+  display: grid;
+  gap: 0.6rem;
+  margin: 1rem 0;
+}
+
+input,
+textarea,
+button {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #bbb;
+  border-radius: 0.4rem;
+  font: inherit;
+}
+
+textarea {
+  min-height: 5rem;
+  resize: vertical;
+}
+
+button {
+  border: 0;
+  background: var(--green);
+  color: #fff;
+  cursor: pointer;
+}
+
+li button,
+td button {
+  width: auto;
+  padding: 0.4rem 0.65rem;
+}
+
+button.plain {
+  padding-left: 0;
+  background: transparent;
+  color: var(--green);
+}
+
+/* Lists */
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+/* Tables */
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 0.7rem;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+th:last-child,
+td:last-child {
+  width: 1%;
+  white-space: nowrap;
+}
+
+[hidden] {
+  display: none !important;
+}

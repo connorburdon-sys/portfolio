@@ -1,0 +1,128 @@
+@import url("common.css");
+
+.contact-layout {
+  display: grid;
+  min-height: calc(100vh - 8rem);
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 2rem;
+  padding: 5rem 4rem;
+  animation: contact-in 400ms ease both;
+}
+
+.contact-intro,
+.contact-links {
+  border-radius: 3rem;
+  padding: 4rem;
+}
+
+.contact-intro {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  background: var(--green-deep);
+}
+
+.contact-intro h1 {
+  max-width: 100%;
+  margin: 3rem 0 0;
+  font-size: clamp(3.2rem, 9vw, 6.5rem);
+  letter-spacing: -0.06em;
+  line-height: 0.9;
+}
+
+.contact-intro > p:not(.eyebrow) {
+  margin-top: 3rem;
+  color: color-mix(in srgb, var(--white) 75%, transparent);
+  font-size: 1.1rem;
+  line-height: 1.75;
+}
+
+.contact-intro small {
+  margin-top: auto;
+  padding-top: 5rem;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--gray);
+  color: var(--dark);
+}
+
+.contact-link-list {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.contact-link-list a {
+  display: grid;
+  grid-template-columns: 2rem 1fr auto;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid color-mix(in srgb, var(--dark) 15%, transparent);
+  border-radius: 1.75rem;
+  background: var(--white);
+  padding: 1.5rem;
+  color: var(--dark);
+  text-decoration: none;
+  transition:
+    color 180ms ease,
+    background 180ms ease;
+}
+
+.contact-link-list a:hover {
+  background: var(--green);
+  color: var(--white);
+}
+
+.contact-link-list small {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: var(--green-deep);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.contact-link-list b {
+  font-size: 1.5rem;
+}
+
+
+.contact-links footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 5rem;
+  color: var(--green-deep);
+  font-size: 0.75rem;
+}
+
+@keyframes contact-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 850px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .contact-layout {
+    padding: 4rem 1.5rem;
+  }
+
+  .contact-intro,
+  .contact-links {
+    padding: 2rem;
+  }
+
+  .contact-links footer {
+    flex-direction: column;
+  }
+}
